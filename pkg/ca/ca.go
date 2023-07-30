@@ -250,9 +250,7 @@ func (ca *CertificateAuthority) SignX509(csr *CertificateSigningRequest) (*Certi
 	return res, err
 }
 
-/*
-return the generated client certificate file
-*/
+// GetCertFile /*
 func (ca *CertificateAuthority) GetCertFile(id string) ([]byte, error) {
 	contents, err := os.ReadFile(clientCAFolder + "/" + id + ".crt")
 	if err != nil {
@@ -261,9 +259,7 @@ func (ca *CertificateAuthority) GetCertFile(id string) ([]byte, error) {
 	return contents, nil
 }
 
-/*
-return the generated client key file
-*/
+// GetKeyFile /*
 func (ca *CertificateAuthority) GetKeyFile(id string) ([]byte, error) {
 	contents, err := os.ReadFile(clientCAFolder + "/" + id + ".key")
 	if err != nil {

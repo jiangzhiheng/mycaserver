@@ -1,14 +1,15 @@
 syntax = "proto3";
 import "google/protobuf/empty.proto";
 
-option go_package = ".";
+// 在当前目录下，生成go代码，并且包名为grpc
+option go_package = ".;grpc";
 
 package grpc;
 
 message CertificateSignRequest {
   repeated string SubjectCountry = 1;
   repeated string SubjectOrganization = 2;
-  repeated string SubjectOrganizationUnit = 3;
+  repeated string SubjectOrganizationalUnit = 3;
   repeated string SubjectLocality = 4;
   repeated string SubjectProvince = 5;
   repeated string SubjectStreetAddress = 6;

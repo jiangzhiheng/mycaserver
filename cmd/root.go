@@ -4,10 +4,8 @@ Copyright © 2023 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"mycaserver/pkg/httpserver"
-	"os"
-
 	"github.com/spf13/cobra"
+	"os"
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -16,15 +14,10 @@ var rootCmd = &cobra.Command{
 	Short: "",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		startServer()
 	},
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
-}
-
-func startServer() {
-	httpserver.Run()
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
